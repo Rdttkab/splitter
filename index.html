@@ -30,43 +30,42 @@
 
 	<main class="main">
 		<form class="tip-calculator-form">
-			<div>
-				<div>
+			<div class="tip-form">
+				<div class="tip-form-item">
 					<label for="">Bill</label>
           <input type="text">
         </div>
 
-        <div>
+        <div class="tip-form-item">
           <label for="">Select Tip %</label>
-          <div>
-            <span>5%</span>
-            <span>10%</span>
-            <span>15%</span>
-            <span>25%</span>
-            <span>50%</span>
-            <span>Custom</span>
+          <div class="tip-select">
+            <button class="tip-btn">5%</button>
+            <button class="tip-btn">10%</button>
+            <button class="tip-btn">15%</button>
+            <button class="tip-btn">25%</button>
+            <button class="tip-btn">50%</button>
+            <input type="text" placeholder="Custom" class="tip-custom">
           </div>
         </div>
 
-        <div>
+        <div class="tip-form-item">
           <label for="">Number of People</label>
           <input type="text">
         </div>
       </div>
 
-      <div>
-        <div>
+      <div class="tip-calculator">
+        <div class="tip-calculator-item">
           Tip Amount
           / person
         </div>
 
-        <div>
-
+        <div class="tip-calculator-item">
           Total
           / person
         </div>
 
-        <button type="reset">Reset</button>
+        <button type="reset" class="btn-reset">RESET</button>
       </div>
 
   </form>
