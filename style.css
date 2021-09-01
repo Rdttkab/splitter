@@ -8,6 +8,7 @@
   --Light-grayish-cyan: hsl(185, 41%, 84%);
   --Light-grayish-cyan-secondary: hsl(189, 41%, 97%);
   --White: hsl(0, 0%, 100%);
+  --active-color: #9FE8DF;
 }
 
 * {
@@ -19,12 +20,24 @@
 body{
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  align-items: center; 
   background-color: var(--Light-grayish-cyan);
   font-family: 'Space Mono', monospace;
+  font-size: 16px;
   height: 100vh;
   font-weight: 700;
+}
+
+@media screen and (min-width: 376px) {
+  body {
+    justify-content: center;
+  }
+}
+
+header {
+  margin-bottom: 86px;
+  letter-spacing: 10px;
+  color: var(--Very-grayish-cyan);
 }
 
 .main {
@@ -32,73 +45,200 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 10px;
+  border-radius: 30px;
 }
 
 .tip-calculator-form {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 32px;
-  
+  height: 100%;
+  width: 100%;
+  padding: 32px 24px;
+}
+
+@media screen and (min-width: 376px) {
+.tip-calculator-form {
+    flex-direction: row;
+  }
 }
 
 label {
   display: block;
+  margin-bottom: 12px;
 }
 
 .tip-form {
-  padding-top: 18px;
-  padding-bottom: 18px;
-  padding-right: 18px; 
-  width: 50%;
+  padding: 48px; 
+  width: 100%;
+  height: 100%;
+}
 
+@media screen and (min-width: 376px) {
+.tip-form {
+    width: 50%;
+  }
 }
 
 .tip-form-item{
-  margin-bottom: 10px; 
+  /* margin-top: 45px;  */
 }
 
+input {
+  background-color: var(--Light-grayish-cyan-secondary);
+  width: 100%; 
+  height: 46px;
+  border: none;
+  border-radius: 5px;
+  font: inherit;
+  font-size: 24px;
+  color: var(--Dark-grayish-cyan-secondary);
+  text-align: right;
+}
+
+input:focus {
+  outline: none;
+  outline-offset: 0;
+  border: 2px solid var(--Strong-cyan);
+}
+
+.tip-form-item > input {
+  
+  /* padding: 16px; */
+}
+
+.bill{
+  background-image: url(images/icon-dollar.svg);
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: 12px 50%;
+}
+
+.num-peop {
+  background-image: url(images/icon-person.svg);
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: 16px 50%;
+}
+
+.tip-select {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto auto auto;
+  column-gap: 14px;
+  row-gap: 16px;
+}
+
+@media screen and (min-width: 376px) {
 .tip-select {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto auto;
   column-gap: 14px;
   row-gap: 16px;
+  }
 }
 
-.tip-btn{
+.tip-btn {
   background-color: var(--Very-dark-cyan);
   color: var(--White);
-  padding: 10px;
   border: 0;
+  outline-offset: 0;
+  text-align: center;
   border-radius: 5px;
+  font: inherit;
+}
+
+.tip-btn:hover {
+  background-color: var(--active-color);
+  color: var(--Very-dark-cyan);
+  cursor: grab;
+}
+
+.tip-btn:focus {
+  outline: none;
+  outline-offset: 0;
+  border: none;
+  background-color: var(--active-color);
+  color: var(--Very-dark-cyan);
 }
 
 .tip-custom {
   color: var(--Very-dark-cyan);
+  height: 46px;
+  font: inherit;
+  /* padding: 14px; */
+  /* text-align: center; */
 }
 
-.tip-calculator{
+.tip-custom {
+  outline-offset: 0;
+}
+
+.tip-custom::placeholder {
+  text-align: center;
+}
+
+.tip-calculator {
   display: flex;
   flex-grow: 1;
   flex-direction: column;
-  justify-content: space-around;
+  align-items: space-between;
+  justify-content: space-between;
   background-color: var(--Very-dark-cyan);
   color: var(--White);
-  padding: 38px;
   border-radius: 10px;
+  height: 100%;
+  width: 100%;
+  /* margin: 24px; */
+  /* margin-bottom: 0; */
+  padding: 30px;
+}
+
+@media screen and (min-width: 376px) {
+.tip-calculator {
+  margin: 24px;
+  margin-left: 0;
+  height: auto;
+  width: auto;
+  }
+}
+
+.tip-calculator > div {
+  /* padding: 30px; */
+  width: 100%;
 }
 
 .tip-calculator-item {
+  margin-bottom: 42px;
+  margin-top: 42px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.tip-calculator-item span {
   display: block;
+  color: var(--Dark-grayish-cyan-secondary);
+}
+
+.price{
+  color: var(--Strong-cyan);
+  font-size: 35px;
 }
 
 .btn-reset{
-  width: 100%;
+  font: inherit;
   border-radius: 5px;
-  background-color: var(--Dark-grayish-cyan);
-  color: var(--White);
+  background-color: var(--active-color);
+  color: var(--Very-dark-cyan);
   border: 0;
+  outline: none;
+  width: 100%;
   padding: 12px;
+  cursor: grab;
+  }
+
+  footer {
+    margin: 20px;
   }
