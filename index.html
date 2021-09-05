@@ -1,87 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Tip calculator app</title>
 
-	<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-	<link rel="stylesheet" href="style.css">
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
 
-	<title>Frontend Mentor | Tip calculator app</title>
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
 
-	<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-	<style>
-		.attribution {
-			font-size: 11px;
-			text-align: center;
-		}
+  <body>
+    <header>
+      <h1>SPLI<br />TTER</h1>
+    </header>
 
-		.attribution a {
-			color: hsl(228, 45%, 44%);
-		}
-	</style>
-</head>
-
-<body>
-	<header><h1>SPLI<br>TTER</h1></header>
-
-	<main class="main">
-		<form class="tip-calculator-form">
-			<div class="tip-form">
-				<div class="tip-form-item">
-					<label for="Bill">Bill</label>
-          <input type="text" class="bill" id="bill" name="bill" placeholder="0">
-        </div>
-
-        <div class="tip-form-item">
-          <label for="">Select Tip %</label>
-          <div class="tip-select">
-            <input type="button" value="5%" class="tip-btn">
-            <input type="button" value="10%" class="tip-btn">
-            <input type="button" value="15%" class="tip-btn">
-            <input type="button" value="25%" class="tip-btn">
-            <input type="button" value="50%" class="tip-btn">
-            <input type="text" placeholder="Custom" class="tip-custom">
+    <main class="main">
+      <form class="tip-calculator-form">
+        <div class="tip-form">
+          <div class="tip-form-item">
+            <label for="Bill">Bill</label>
+            <input
+              type="text"
+              class="bill"
+              id="bill"
+              name="bill"
+              placeholder="0"
+            />
           </div>
-        </div>
 
-        <div class="tip-form-item">
-          <label for="num-peop">Number of People</label>
-          <input type="text" class="num-peop" id="num-peop" name="num-peop" placeholder="0">
-        </div>
-      </div>
-
-      <div class="tip-calculator">
-        <div>
-          <div class="tip-calculator-item">
-            <div>Tip Amount
-              <span>/ person </span>
+          <div class="tip-form-item">
+            <label for="">Select Tip %</label>
+            <div class="tip-select">
+              <input type="button" value="5%" class="tip-btn" />
+              <input type="button" value="10%" class="tip-btn" />
+              <input type="button" value="15%" class="tip-btn" />
+              <input type="button" value="25%" class="tip-btn" />
+              <input type="button" value="50%" class="tip-btn" />
+              <input type="text" placeholder="Custom" class="tip-custom" />
             </div>
-            <div class="price">$0.00</div>
           </div>
 
-          <div class="tip-calculator-item">
-            <div>Total
-              <span>/ person </span>
-            </div>
-
-            <div class="price">$0.00</div>
+          <div class="tip-form-item">
+            <label for="num-peop">Number of People</label>
+            <input
+              type="text"
+              class="num-peop"
+              id="num-peop"
+              name="num-peop"
+              placeholder="0"
+            />
           </div>
         </div>
-        
-        <button type="reset" class="btn-reset">RESET</button>
-      </div>
-    </form>
-  </main>
 
-  <footer>
-    <div class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="https://www.rediettekola.com" target="-_blank">Rediet Tekola</a>.
-    </div>
-  </footer>
-  <script src="script.js"></script>
-</body>
+        <div class="tip-calculator">
+          <div>
+            <div class="tip-calculator-item">
+              <div>
+                Tip Amount
+                <span>/ person </span>
+              </div>
+              <div class="price">$0.00</div>
+            </div>
+
+            <div class="tip-calculator-item">
+              <div>
+                Total
+                <span>/ person </span>
+              </div>
+
+              <div class="price">$0.00</div>
+            </div>
+          </div>
+
+          <button type="reset" class="btn-reset">RESET</button>
+        </div>
+      </form>
+    </main>
+
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a href="https://www.rediettekola.com" target="-_blank">Rediet Tekola</a
+        >.
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
 </html>

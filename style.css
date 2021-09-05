@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
 
 :root {
   --Strong-cyan: hsl(172, 67%, 45%);
@@ -8,7 +8,7 @@
   --Light-grayish-cyan: hsl(185, 41%, 84%);
   --Light-grayish-cyan-secondary: hsl(189, 41%, 97%);
   --White: hsl(0, 0%, 100%);
-  --active-color: #9FE8DF;
+  --active-color: #9fe8df;
 }
 
 * {
@@ -17,34 +17,52 @@
   padding: 0;
 }
 
-body{
+body {
   display: flex;
   flex-direction: column;
-  align-items: center; 
+  align-items: center;
   background-color: var(--Light-grayish-cyan);
-  font-family: 'Space Mono', monospace;
+  font-family: "Space Mono", monospace;
   font-size: 16px;
   height: 100vh;
   font-weight: 700;
 }
 
-@media screen and (min-width: 376px) {
+@media only screen and (min-width: 700px) {
   body {
     justify-content: center;
   }
 }
 
 header {
-  margin-bottom: 86px;
-  letter-spacing: 10px;
+  /* width: 100%; */
+  height: 9em;
+  margin-top: 5.375em;
+  margin-bottom: 5.375em;
+  letter-spacing: 0.625em;
   color: var(--Very-grayish-cyan);
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
 }
+
+@media only screen and (min-width: 700px) {
+  header {
+    height: auto;
+  }
+}
+
+/* header h1 {
+    position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+} */
 
 .main {
   background-color: var(--White);
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
   border-radius: 30px;
 }
 
@@ -55,11 +73,11 @@ header {
   align-items: center;
   height: 100%;
   width: 100%;
-  padding: 32px 24px;
+  padding: 30px 24px 32px 24px;
 }
 
-@media screen and (min-width: 376px) {
-.tip-calculator-form {
+@media only screen and (min-width: 700px) {
+  .tip-calculator-form {
     flex-direction: row;
   }
 }
@@ -70,24 +88,30 @@ label {
 }
 
 .tip-form {
-  padding: 48px; 
+  padding: 8px;
   width: 100%;
   height: 100%;
 }
 
-@media screen and (min-width: 376px) {
-.tip-form {
+@media only screen and (min-width: 700px) {
+  .tip-form {
     width: 50%;
   }
 }
 
-.tip-form-item{
-  /* margin-top: 45px;  */
+.tip-form-item:not(:last-child) {
+  margin-bottom: 38px;
+}
+
+@media screen and (min-width: 376px) {
+  .tip-form-item:not(:last-child) {
+    margin-bottom: 46px;
+  }
 }
 
 input {
   background-color: var(--Light-grayish-cyan-secondary);
-  width: 100%; 
+  width: 100%;
   height: 46px;
   border: none;
   border-radius: 5px;
@@ -104,11 +128,10 @@ input:focus {
 }
 
 .tip-form-item > input {
-  
   /* padding: 16px; */
 }
 
-.bill{
+.bill {
   background-image: url(images/icon-dollar.svg);
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -131,12 +154,12 @@ input:focus {
 }
 
 @media screen and (min-width: 376px) {
-.tip-select {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: auto auto;
-  column-gap: 14px;
-  row-gap: 16px;
+  .tip-select {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+    column-gap: 14px;
+    row-gap: 16px;
   }
 }
 
@@ -196,12 +219,12 @@ input:focus {
   padding: 30px;
 }
 
-@media screen and (min-width: 376px) {
-.tip-calculator {
-  margin: 24px;
-  margin-left: 0;
-  height: auto;
-  width: auto;
+@media only screen and (min-width: 700px) {
+  .tip-calculator {
+    /* margin: 24px; */
+    margin-left: 0;
+    height: auto;
+    width: auto;
   }
 }
 
@@ -222,12 +245,12 @@ input:focus {
   color: var(--Dark-grayish-cyan-secondary);
 }
 
-.price{
+.price {
   color: var(--Strong-cyan);
   font-size: 35px;
 }
 
-.btn-reset{
+.btn-reset {
   font: inherit;
   border-radius: 5px;
   background-color: var(--active-color);
@@ -237,8 +260,8 @@ input:focus {
   width: 100%;
   padding: 12px;
   cursor: grab;
-  }
+}
 
-  footer {
-    margin: 20px;
-  }
+footer {
+  margin: 20px;
+}
